@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALT Services - Portfolio</title>
+  <style>
+    :root {
+      --primary: #0066ff;
+      --accent: #00cc99;
+      --bg: #f8f9fa;
+      --text: #212529;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #e6f0ff, #f5fcff);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #ffffffcc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: var(--accent);
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: var(--primary);
+      transition: 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .services, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffffcc;
+      color: #666;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ALT Services</h1>
+    <p>Solutions intelligentes, résultats professionnels.</p>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p>ALT Services est une structure innovante dédiée à l'accompagnement administratif, à la création de contenu et à l'automatisation de tâches numériques. Nous accompagnons nos clients dans leur réussite personnelle et professionnelle grâce à des solutions adaptées, accessibles et performantes.</p>
+  </section>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/0066ff/document--v1.png" alt="Gestion admin">
+        <h3>Gestion administrative</h3>
+        <p>Création de CV, lettres, formulaires, traductions, constitution de dossiers complets.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/00cc99/content.png" alt="Contenu">
+        <h3>Création de contenu</h3>
+        <p>Rédaction assistée par IA, design de présentations, création de contenu pour réseaux sociaux.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/ff6600/settings-3.png" alt="Automatisation">
+        <h3>Automatisation digitale</h3>
+        <p>Automatisation via Make.com, Google Forms, Airtable, et intégration d'outils intelligents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projets réalisés</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/000000/project.png" alt="Projet 1">
+        <h3>Dossier Auto-entrepreneur</h3>
+        <p>Accompagnement complet pour la création du statut et documents personnalisés.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/ios-filled/100/000000/chat.png" alt="Projet 2">
+        <h3>Bot WhatsApp + Google Sheets</h3>
+        <p>Connexion automatisée pour recevoir et enregistrer les demandes clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email : alt.services@example.com</p>
+    <p>WhatsApp : +212 615 178 549</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ALT Services. Tous droits réservés.</p>
+  </footer>
+<script>
+  // Exemple simple : effet fade-in sur le header au chargement
+  window.addEventListener('load', () => {
+    const header = document.querySelector('header');
+    header.style.opacity = 0;
+    header.style.transition = 'opacity 1.5s ease-in-out';
+    setTimeout(() => {
+      header.style.opacity = 1;
+    }, 100);
+  });
+</script>
+</body>
+</html>
+
+
